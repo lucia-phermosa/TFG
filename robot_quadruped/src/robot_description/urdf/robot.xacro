@@ -277,88 +277,100 @@
   </collision>
 </link>
 
-<joint name="Revolution 1" type="continuous">
+<joint name="Revolution 1" type="revolute">
   <origin xyz="-0.063124 0.043002 -0.072222" rpy="0 0 0"/>
   <parent link="FL_Brazo_1"/>
   <child link="FL_Antebrazo_1"/>
   <axis xyz="0.134783 0.990599 0.023402"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
-<joint name="Revolution 2" type="continuous">
+<joint name="Revolution 2" type="revolute">
   <origin xyz="-0.00625 0.020813 0.001086" rpy="0 0 0"/>
   <parent link="FL_Hombro_1"/>
   <child link="FL_Brazo_1"/>
   <axis xyz="-0.134783 -0.990599 -0.023402"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
-<joint name="Revolution 3" type="continuous">
+<joint name="Revolution 3" type="revolute">
   <origin xyz="0.182872 -0.091608 0.145512" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="FL_Hombro_1"/>
   <axis xyz="-0.990874 0.134786 0.001454"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
-<joint name="Revolution 4" type="continuous">
+<joint name="Revolution 4" type="revolute">
   <origin xyz="-0.068203 0.041505 -0.068376" rpy="0 0 0"/>
   <parent link="RL_Brazo_1"/>
   <child link="RL_Antebrazo_1"/>
   <axis xyz="0.134773 0.990853 -0.006819"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
-<joint name="Revolution 5" type="continuous">
+<joint name="Revolution 5" type="revolute">
   <origin xyz="0.011587 0.01841 0.000462" rpy="0 0 0"/>
   <parent link="RL_Hombro_1"/>
   <child link="RL_Brazo_1"/>
   <axis xyz="0.134773 0.990853 -0.006819"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
-<joint name="Revolution 6" type="continuous">
+<joint name="Revolution 6" type="revolute">
   <origin xyz="-0.027292 -0.06302 0.14582" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="RL_Hombro_1"/>
   <axis xyz="-0.990874 0.134786 0.001454"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
-<joint name="Revolution 7" type="continuous">
+<joint name="Revolution 7" type="revolute">
   <origin xyz="-0.079091 -0.012167 -0.068164" rpy="0 0 0"/>
   <parent link="RR_Brazo_1"/>
   <child link="RR_Antebrazo_1"/>
   <axis xyz="0.133564 0.98032 0.145373"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
-<joint name="Revolution 8" type="continuous">
+<joint name="Revolution 8" type="revolute">
   <origin xyz="0.006263 -0.020711 -0.002288" rpy="0 0 0"/>
   <parent link="RR_Hombro_1"/>
   <child link="RR_Brazo_1"/>
   <axis xyz="-0.133564 -0.98032 -0.145373"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
-<joint name="Revolution 9" type="continuous">
+<joint name="Revolution 9" type="revolute">
   <origin xyz="-0.039343 -0.151603 0.145399" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="RR_Hombro_1"/>
   <axis xyz="-0.990874 0.134786 0.001454"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
-<joint name="Revolution 10" type="continuous">
+<joint name="Revolution 10" type="revolute">
   <origin xyz="-0.072711 -0.019296 -0.07342" rpy="0 0 0"/>
   <parent link="FR_Brazo_1"/>
   <child link="FR_Antebrazo_1"/>
   <axis xyz="0.134701 0.989734 0.047783"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
-<joint name="Revolution 11" type="continuous">
+<joint name="Revolution 11" type="revolute">
   <origin xyz="-0.015552 -0.017874 -0.000318" rpy="0 0 0"/>
   <parent link="FR_Hombro_1"/>
   <child link="FR_Brazo_1"/>
   <axis xyz="-0.134701 -0.989734 -0.047783"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
-<joint name="Revolution 12" type="continuous">
+<joint name="Revolution 12" type="revolute">
   <origin xyz="0.170768 -0.180587 0.145089" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="FR_Hombro_1"/>
   <axis xyz="0.990874 -0.134786 -0.001454"/>
+  <limit lower="-1.57" upper="1.57" effort="10.0" velocity="5.0"/>
 </joint>
 
 </robot>

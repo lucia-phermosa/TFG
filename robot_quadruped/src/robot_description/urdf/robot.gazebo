@@ -1,7 +1,10 @@
 <?xml version="1.0" ?>
 <robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<xacro:property name="body_color" value="Gazebo/Silver" />
+<xacro:property name="body_color" value="Gazebo/Gray" />
+<xacro:property name="shoulder_color" value="Gazebo/Gray" />
+<xacro:property name="arm_color" value="Gazebo/White" />
+<xacro:property name="forearm_color" value="Gazebo/Gray" />
 
 <gazebo>
   <plugin name="control" filename="libgazebo_ros_control.so"/>
@@ -15,84 +18,84 @@
 </gazebo>
 
 <gazebo reference="FL_Antebrazo_1">
-  <material>${body_color}</material>
+  <material>${forearm_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="FL_Brazo_1">
-  <material>${body_color}</material>
+  <material>${arm_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="FL_Hombro_1">
-  <material>${body_color}</material>
+  <material>${shoulder_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="RL_Antebrazo_1">
-  <material>${body_color}</material>
+  <material>${forearm_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="RL_Brazo_1">
-  <material>${body_color}</material>
+  <material>${arm_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="RL_Hombro_1">
-  <material>${body_color}</material>
+  <material>${shoulder_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="RR_Antebrazo_1">
-  <material>${body_color}</material>
+  <material>${forearm_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="RR_Brazo_1">
-  <material>${body_color}</material>
+  <material>${arm_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="RR_Hombro_1">
-  <material>${body_color}</material>
+  <material>${shoulder_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="FR_Antebrazo_1">
-  <material>${body_color}</material>
+  <material>${forearm_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="FR_Brazo_1">
-  <material>${body_color}</material>
+  <material>${arm_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="FR_Hombro_1">
-  <material>${body_color}</material>
+  <material>${shoulder_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
