@@ -23,6 +23,8 @@ def generate_launch_description():
     #os.environ["GAZEBO_MODEL_PATH"] = gazebo_models_path
     #print(gazebo_models_path)
 
+    demo_world_path = os.path.join(pkg_robot_gazebo, 'worlds', 'demo.sdf')
+
     if 'GAZEBO_MODEL_PATH' in os.environ:
         os.environ['GAZEBO_MODEL_PATH'] = os.environ['GAZEBO_MODEL_PATH'] + ':' + install_dir + '/share'+ ':' + gazebo_models_path
     else:
@@ -38,12 +40,19 @@ def generate_launch_description():
     gazebo_launch_file = os.path.join(pkg_gazebo_ros, 'launch', 'gz_sim.launch.py')  # Update the actual launch file name
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(gazebo_launch_file),
-        launch_arguments={'gz_args': '-r -v 4 empty.sdf', 'on_exit_shutdown': 'true'}.items()
-    )
+        launch_arguments={'gz_args': f'-r -v 4 {demo_world_path}', 'on_exit_shutdown': 'true'}.items()
+)   
 
-    launchDescriptionObject = LaunchDescription()
-    launchDescriptionObject.add_action(gazebo)
+    #launchDescriptionObject = LaunchDescription()
+    #launchDescriptionObject.add_action(gazebo)
 
-    return launchDescriptionObject
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'world',
+            default_value=[demo_world_path, ""],
+            description="SDF world file"
+        ),
+        gazebo
+    ])
 
 
