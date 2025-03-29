@@ -1,12 +1,29 @@
 <?xml version="1.0" ?>
 <sdf version="1.11">
   <world name="robot_world">
-    <physics name="1ms" type="ignored">
-      <max_step_size>0.001</max_step_size>
-      <real_time_factor>1.0</real_time_factor>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.005</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>200</real_time_update_rate>
     </physics>
 
+    <scene>
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>
+      <ambient>0.85 0.85 0.85 1</ambient>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <background>0.35 0.35 0.35 1.0</background>
+    </scene>
+
     <gui fullscreen="1">
+
+      <camera name="user_camera">
+       <pose>-40.637 0.86 2.365 0 0.1899 0.476</pose>
+     </camera>
 
       <!-- 3D scene -->
       <plugin filename="GzScene3D" name="3D View">
@@ -124,6 +141,41 @@
         </visual>
       </link>
     </model>
+  
+    <!-- Environment -->
+    <include>
+      <name>city_terrain</name>
+      <pose>0 0 0.0 0 0 0</pose>
+      <uri>file:///home/lucia/TFG/robot_quadruped/src/robot_gazebo/models/city_terrain/city_terrain.sdf</uri>
+    </include>
+
+    <include>
+      <name>ocean</name>
+      <pose>40 -20 -2 0 0 0</pose>
+      <uri>file:///home/lucia/TFG/robot_quadruped/src/robot_gazebo/models/coast_water/coast_water.sdf</uri>
+    </include>
+
+    <road name="road_y_1">
+      <width>7.4</width>
+      <point>-45 -48.7 0.01</point>
+      <point>-45 49.2 0.01</point>
+    </road>
+
+    <road name="road_y_2">
+      <width>7.4</width>
+      <point>-15 -48.7 0.01</point>
+      <point>-15 49.2 0.01</point>
+
+
+      <material>
+        <script>
+          <uri>file:///home/lucia/TFG/robot_quadruped/src/robot_gazebo/models/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/Residential</name>
+        </script>
+      </material>
+
+
+    </road>
 
   </world>
 </sdf>
