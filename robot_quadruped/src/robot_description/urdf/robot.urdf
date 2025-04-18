@@ -4,553 +4,602 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="robot">
-  <material name="silver">
-    <color rgba="0.700 0.700 0.700 1.000"/>
-  </material>
-  <transmission name="Revolution 1_tran">
+  <transmission name="Revolution_1_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 1">
+    <joint name="Revolution_1">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 1_actr">
+    <actuator name="Revolution_1_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolution 2_tran">
+  <transmission name="Revolution_2_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 2">
+    <joint name="Revolution_2">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 2_actr">
+    <actuator name="Revolution_2_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolution 3_tran">
+  <transmission name="Revolution_3_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 3">
+    <joint name="Revolution_3">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 3_actr">
+    <actuator name="Revolution_3_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolution 4_tran">
+  <transmission name="Revolution_4_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 4">
+    <joint name="Revolution_4">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 4_actr">
+    <actuator name="Revolution_4_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolution 5_tran">
+  <transmission name="Revolution_5_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 5">
+    <joint name="Revolution_5">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 5_actr">
+    <actuator name="Revolution_5_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolution 6_tran">
+  <transmission name="Revolution_6_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 6">
+    <joint name="Revolution_6">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 6_actr">
+    <actuator name="Revolution_6_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolution 7_tran">
+  <transmission name="Revolution_7_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 7">
+    <joint name="Revolution_7">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 7_actr">
+    <actuator name="Revolution_7_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolution 8_tran">
+  <transmission name="Revolution_8_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 8">
+    <joint name="Revolution_8">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 8_actr">
+    <actuator name="Revolution_8_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolution 9_tran">
+  <transmission name="Revolution_9_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 9">
+    <joint name="Revolution_9">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 9_actr">
+    <actuator name="Revolution_9_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolution 10_tran">
+  <transmission name="Revolution_10_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 10">
+    <joint name="Revolution_10">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 10_actr">
+    <actuator name="Revolution_10_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolution 11_tran">
+  <transmission name="Revolution_11_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 11">
+    <joint name="Revolution_11">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 11_actr">
+    <actuator name="Revolution_11_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolution 12_tran">
+  <transmission name="Revolution_12_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolution 12">
+    <joint name="Revolution_12">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolution 12_actr">
+    <actuator name="Revolution_12_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <gazebo>
-    <plugin filename="libgazebo_ros_control.so" name="control"/>
-  </gazebo>
   <gazebo reference="base_link">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
+    <!--<static>true</static>-->
     <selfCollide>true</selfCollide>
-    <gravity>true</gravity>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="FL_Antebrazo_1">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="FL_Brazo_1">
-    <material>Gazebo/White</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="FL_Hombro_1">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="RL_Antebrazo_1">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="RL_Brazo_1">
-    <material>Gazebo/White</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="RL_Hombro_1">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="RR_Antebrazo_1">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="RR_Brazo_1">
-    <material>Gazebo/White</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="RR_Hombro_1">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="FR_Antebrazo_1">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="FR_Brazo_1">
-    <material>Gazebo/White</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
   <gazebo reference="FR_Hombro_1">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/DarkGrey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
+    <gravity>false</gravity>
   </gazebo>
+
+  <!-- IMU sensor -->
+  <gazebo reference="base_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <plugin filename="libgz-sim8-imu-system.so" name="gz::sim::systems::Imu">
+        <topicName>robot_imu/base_link_orientation</topicName>
+        <updateRateHZ>15.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>base_link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+
+  <link name="world"/>
+  <joint name="fixed_base_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 2.35" rpy="0 0 0"/>
+  </joint>
   <link name="base_link">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.07222258331085853 -0.12179187736378733 0.1418817325159425"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.132259326627842"/>
       <inertia ixx="0.000199" ixy="0.000129" ixz="2e-06" iyy="0.001133" iyz="-3e-06" izz="0.001312"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/base_link.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/base_link.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/base_link.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/base_link.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
+
   <link name="FL_Antebrazo_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.024906510048271865 -0.012934566090020787 -0.02332905183658706"/>
-      <mass value="0.011017130901550822"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.11017130901550822"/>
       <inertia ixx="5e-06" ixy="0" ixz="0" iyy="1.1e-05" iyz="0" izz="6e-06"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="-0.113498 0.027793 -0.074376"/>
+      <origin rpy="0 0 0" xyz="-2.275 0.6 -1.49"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Antebrazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Antebrazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.113498 0.027793 -0.074376"/>
+      <origin rpy="0 0 0" xyz="-2.275 0.6 -1.49"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Antebrazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Antebrazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
   <link name="FL_Brazo_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.012728039094737853 0.026840862360902905 -0.014319856146115362"/>
-      <mass value="0.030409136144975923"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.30409136144975923"/>
       <inertia ixx="2.3e-05" ixy="2e-06" ixz="-1.7e-05" iyy="3.7e-05" iyz="2e-06" izz="2.3e-05"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="-0.176622 0.070795 -0.146598"/>
+      <origin rpy="0 0 0" xyz="-3.53 1.40795 -2.926598"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Brazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Brazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.176622 0.070795 -0.146598"/>
+      <origin rpy="0 0 0" xyz="-3.53 1.40795 -2.926598"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Brazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Brazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
   <link name="FL_Hombro_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.00807166837336415 0.00864007598574612 -0.005345198815314228"/>
-      <mass value="0.01859774303312477"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.1859774303312477"/>
       <inertia ixx="4e-06" ixy="-0.0" ixz="-0.0" iyy="3e-06" iyz="-1e-06" izz="4e-06"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="-0.182872 0.091608 -0.145512"/>
+      <origin rpy="0 0 0" xyz="-3.6501245 1.8257 -2.90722"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Hombro_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Hombro_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.182872 0.091608 -0.145512"/>
+      <origin rpy="0 0 0" xyz="-3.6501245 1.8257 -2.90722"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Hombro_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FL_Hombro_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
   <link name="RL_Antebrazo_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.02371528160477581 -0.012661175357446475 -0.023335237480239773"/>
-      <mass value="0.011048026895118968"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.11048026895118968"/>
       <inertia ixx="5e-06" ixy="0" ixz="0" iyy="1.1e-05" iyz="0" izz="6e-06"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0.083908 0.003105 -0.077906"/>
+      <origin rpy="0 0 0" xyz="1.675 0.1 -1.56"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Antebrazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Antebrazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0.083908 0.003105 -0.077906"/>
+      <origin rpy="0 0 0" xyz="1.675 0.1 -1.56"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Antebrazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Antebrazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
   <link name="RL_Brazo_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.013777122484777794 0.02654286329082783 -0.013938025840504548"/>
-      <mass value="0.03040973749415957"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.3040973749415957"/>
       <inertia ixx="2.1e-05" ixy="2e-06" ixz="-1.6e-05" iyy="3.7e-05" iyz="2e-06" izz="2.5e-05"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0.015705 0.04461 -0.146282"/>
+      <origin rpy="0 0 0" xyz="0.32 0.85 -2.91722"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Brazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Brazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0.015705 0.04461 -0.146282"/>
+      <origin rpy="0 0 0" xyz="0.32 0.85 -2.91722"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Brazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Brazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
   <link name="RL_Hombro_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.010050064430664689 0.00600649998656224 -0.00559595754700154"/>
-      <mass value="0.018594032037447486"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.18594032037447486"/>
       <inertia ixx="4e-06" ixy="-0.0" ixz="-0.0" iyy="3e-06" iyz="-1e-06" izz="4e-06"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0.027292 0.06302 -0.14582"/>
+      <origin rpy="0 0 0" xyz="0.6 1.23 -2.91722"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Hombro_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Hombro_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0.027292 0.06302 -0.14582"/>
+      <origin rpy="0 0 0" xyz="0.6 1.23 -2.91722"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Hombro_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RL_Hombro_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
   <link name="RR_Antebrazo_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.02698390764706618 0.008870509111750913 -0.021458119386483163"/>
-      <mass value="0.011048045171812943"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.11048045171812943"/>
       <inertia ixx="5e-06" ixy="-0.0" ixz="5e-06" iyy="1.1e-05" iyz="0.0" izz="7e-06"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0.112171 0.184481 -0.074947"/>
+      <origin rpy="0 0 0" xyz="2.242 3.66 -1.5"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Antebrazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Antebrazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0.112171 0.184481 -0.074947"/>
+      <origin rpy="0 0 0" xyz="2.242 3.66 -1.5"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Antebrazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Antebrazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
   <link name="RR_Brazo_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.020804757091526432 -0.01978589736411107 -0.01625818658552383"/>
-      <mass value="0.03040973749415908"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.3040973749415908"/>
       <inertia ixx="2e-05" ixy="5e-06" ixz="-1.6e-05" iyy="3.6e-05" iyz="4e-06" izz="2.7e-05"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0.03308 0.172314 -0.143111"/>
+      <origin rpy="0 0 0" xyz="0.65 3.5 -2.9"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Brazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Brazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0.03308 0.172314 -0.143111"/>
+      <origin rpy="0 0 0" xyz="0.65 3.5 -2.9"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Brazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Brazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
   <link name="RR_Hombro_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.008193226346896038 -0.00763847355231409 -0.006555003118409203"/>
-      <mass value="0.0185940356423774"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.185940356423774"/>
       <inertia ixx="4e-06" ixy="-0.0" ixz="0.0" iyy="3e-06" iyz="0.0" izz="4e-06"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0.039343 0.151603 -0.145399"/>
+      <origin rpy="0 0 0" xyz="0.84 3.035 -2.9"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Hombro_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Hombro_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0.039343 0.151603 -0.145399"/>
+      <origin rpy="0 0 0" xyz="0.84 3.035 -2.9"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Hombro_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/RR_Hombro_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
   <link name="FR_Antebrazo_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.027854725836698346 0.005342629949250555 -0.02180480618155125"/>
-      <mass value="0.011033575580722182"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.11033575580722182"/>
       <inertia ixx="5e-06" ixy="0" ixz="0" iyy="1.1e-05" iyz="0" izz="6e-06"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="-0.082505 0.217757 -0.071351"/>
+      <origin rpy="0 0 0" xyz="-1.655 4.35 -1.43"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Antebrazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Antebrazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.082505 0.217757 -0.071351"/>
+      <origin rpy="0 0 0" xyz="-1.655 4.35 -1.43"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Antebrazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Antebrazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
   <link name="FR_Brazo_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.019532302965656417 -0.021370569425303215 -0.01582395100722897"/>
-      <mass value="0.03040973749414956"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.3040973749414956"/>
       <inertia ixx="2.3e-05" ixy="3e-06" ixz="-1.6e-05" iyy="3.7e-05" iyz="3e-06" izz="2.4e-05"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="-0.155216 0.198461 -0.144771"/>
+      <origin rpy="0 0 0" xyz="-3.1 4 -2.90722"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Brazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Brazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.155216 0.198461 -0.144771"/>
+      <origin rpy="0 0 0" xyz="-3.1 4 -2.90722"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Brazo_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Brazo_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
   <link name="FR_Hombro_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.014006375330741755 -0.005228191116020547 -0.005857435969181285"/>
-      <mass value="0.01859736994896006"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.1859736994896006"/>
       <inertia ixx="4e-06" ixy="-0.0" ixz="0.0" iyy="3e-06" iyz="1e-06" izz="4e-06"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="-0.170768 0.180587 -0.145089"/>
+      <origin rpy="0 0 0" xyz="-3.37 3.62 -2.90722"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Hombro_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Hombro_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
-      <material name="silver"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.170768 0.180587 -0.145089"/>
+      <origin rpy="0 0 0" xyz="-3.37 3.62 -2.90722"/>
       <geometry>
-        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Hombro_1.stl" scale="0.002 0.002 0.002"/>
+        <mesh filename="file:///home/lucia/TFG/robot_quadruped/src/robot_description/meshes/FR_Hombro_1.stl" scale="0.02 0.02 0.02"/>
       </geometry>
     </collision>
   </link>
-  <joint name="Revolution 1" type="revolute">
-    <origin rpy="0 0 0" xyz="-0.063124 0.043002 -0.072222"/>
+
+  <link name="imu_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="1e-5" iyy="1e-5" izz="1e-5" ixy="0.0" ixz="0.0" iyz="0.0"/>
+    </inertial>
+  </link>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+  </joint>
+
+  <joint name="Revolution_1" type="revolute">
+    <origin rpy="0 0 0" xyz="-1.258 0.8 -1.435"/>
     <parent link="FL_Brazo_1"/>
     <child link="FL_Antebrazo_1"/>
-    <axis xyz="0.134783 0.990599 0.023402"/>
+    <axis xyz="0 -1 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
-  <joint name="Revolution 2" type="revolute">
-    <origin rpy="0 0 0" xyz="-0.00625 0.020813 0.001086"/>
+  <joint name="Revolution_2" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.1155 0.415 0.025"/>
     <parent link="FL_Hombro_1"/>
     <child link="FL_Brazo_1"/>
-    <axis xyz="-0.134783 -0.990599 -0.023402"/>
+    <axis xyz="0 -1 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
-  <joint name="Revolution 3" type="revolute">
-    <origin rpy="0 0 0" xyz="0.182872 -0.091608 0.145512"/>
+  <joint name="Revolution_3" type="revolute">
+    <origin rpy="0 0 0" xyz="3.6001245 -1.83513 2.90722"/>
     <parent link="base_link"/>
     <child link="FL_Hombro_1"/>
-    <axis xyz="-0.990874 0.134786 0.001454"/>
+    <axis xyz="-1 0 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
-  <joint name="Revolution 4" type="revolute">
-    <origin rpy="0 0 0" xyz="-0.068203 0.041505 -0.068376"/>
+  <joint name="Revolution_4" type="revolute">
+    <origin rpy="0 0 0" xyz="-1.358 0.75 -1.355"/>
     <parent link="RL_Brazo_1"/>
     <child link="RL_Antebrazo_1"/>
-    <axis xyz="0.134773 0.990853 -0.006819"/>
+    <axis xyz="0 -1 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
-  <joint name="Revolution 5" type="revolute">
-    <origin rpy="0 0 0" xyz="0.011587 0.01841 0.000462"/>
+  <joint name="Revolution_5" type="revolute">
+    <origin rpy="0 0 0" xyz="0.285 0.34 0.01"/>
     <parent link="RL_Hombro_1"/>
     <child link="RL_Brazo_1"/>
-    <axis xyz="0.134773 0.990853 -0.006819"/>
+    <axis xyz="0 -1 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
-  <joint name="Revolution 6" type="revolute">
-    <origin rpy="0 0 0" xyz="-0.027292 -0.06302 0.14582"/>
+  <joint name="Revolution_6" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.557292 -1.25513 2.91722"/>
     <parent link="base_link"/>
     <child link="RL_Hombro_1"/>
-    <axis xyz="-0.990874 0.134786 0.001454"/>
+    <axis xyz="-1 0 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
-  <joint name="Revolution 7" type="revolute">
-    <origin rpy="0 0 0" xyz="-0.079091 -0.012167 -0.068164"/>
+  <joint name="Revolution_7" type="revolute">
+    <origin rpy="0 0 0" xyz="-1.59 -0.15 -1.4"/>
     <parent link="RR_Brazo_1"/>
     <child link="RR_Antebrazo_1"/>
-    <axis xyz="0.133564 0.98032 0.145373"/>
+    <axis xyz="0 -1 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
-  <joint name="Revolution 8" type="revolute">
-    <origin rpy="0 0 0" xyz="0.006263 -0.020711 -0.002288"/>
+  <joint name="Revolution_8" type="revolute">
+    <origin rpy="0 0 0" xyz="0.18 -0.415 -0.035"/>
     <parent link="RR_Hombro_1"/>
     <child link="RR_Brazo_1"/>
-    <axis xyz="-0.133564 -0.98032 -0.145373"/>
+    <axis xyz="0 -1 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
-  <joint name="Revolution 9" type="revolute">
-    <origin rpy="0 0 0" xyz="-0.039343 -0.151603 0.145399"/>
+  <joint name="Revolution_9" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.8 -3.03 2.9"/>
     <parent link="base_link"/>
     <child link="RR_Hombro_1"/>
-    <axis xyz="-0.990874 0.134786 0.001454"/>
+    <axis xyz="1 0 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
-  <joint name="Revolution 10" type="revolute">
-    <origin rpy="0 0 0" xyz="-0.072711 -0.019296 -0.07342"/>
+  <joint name="Revolution_10" type="revolute">
+    <origin rpy="0 0 0" xyz="-1.445 -0.32 -1.48"/>
     <parent link="FR_Brazo_1"/>
     <child link="FR_Antebrazo_1"/>
-    <axis xyz="0.134701 0.989734 0.047783"/>
+    <axis xyz="0 -1 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
-  <joint name="Revolution 11" type="revolute">
-    <origin rpy="0 0 0" xyz="-0.015552 -0.017874 -0.000318"/>
+  <joint name="Revolution_11" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.27 -0.35 -0.01"/>
     <parent link="FR_Hombro_1"/>
     <child link="FR_Brazo_1"/>
-    <axis xyz="-0.134701 -0.989734 -0.047783"/>
+    <axis xyz="0 -1 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
-  <joint name="Revolution 12" type="revolute">
-    <origin rpy="0 0 0" xyz="0.170768 -0.180587 0.145089"/>
+  <joint name="Revolution_12" type="revolute">
+    <origin rpy="0 0 0" xyz="3.41 -3.61 2.90722"/>
     <parent link="base_link"/>
     <child link="FR_Hombro_1"/>
-    <axis xyz="0.990874 -0.134786 -0.001454"/>
+    <axis xyz="1 0 0"/>
     <limit effort="10.0" lower="-1.57" upper="1.57" velocity="5.0"/>
+    <dynamics damping="0.01" friction="0.1"/>
   </joint>
+
 </robot>
