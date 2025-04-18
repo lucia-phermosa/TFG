@@ -85,22 +85,7 @@
         <real_time_factor>true</real_time_factor>
         <iterations>true</iterations>
       </plugin>
-
-      <plugin filename="JointPositionController" name="JointPositionController">
-        <gz-gui>
-          <property type="double" key="height">600</property>
-          <property type="double" key="width">400</property>
-
-          <property type="string" key="state">floating</property>
-          <anchors target="3D View">
-            <line own="right" target="right"/>
-            <line own="top" target="top"/>
-          </anchors>
-        </gz-gui>
-        <model_name>robot</model_name>
-      </plugin>
-    </gui>
-
+      
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>

@@ -90,23 +90,6 @@ def generate_launch_description():
         ]
     )
 
-    # 6. Spawners de controladores 
-    controller_spawners = []
-    for i in range(1, 13):
-        controller_name = f"Revolution_{i}_controller"
-        spawner = Node(
-            package="controller_manager",
-            executable="spawner",
-            arguments=[controller_name],
-            output="screen"
-        )
-        controller_spawners.append(spawner)
-
-    delayed_controller_spawners = TimerAction(
-        period=15.0,
-        actions=controller_spawners
-    )
-
     return LaunchDescription([
         set_gazebo_model_path,
         set_gazebo_plugin_path,
@@ -114,5 +97,4 @@ def generate_launch_description():
         robot_state_publisher,
         spawn_robot,
         ros2_control_node,
-        delayed_controller_spawners
     ])
