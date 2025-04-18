@@ -1,16 +1,22 @@
-material Gazebo/SkateParkMaterial
+material floor
 {
     technique
     {
         pass
         {
-            ambient 0.5 0.5 0.5 1.0
+            ambient 1.0 1.0 1.0 1.0
             diffuse 1.0 1.0 1.0 1.0
-            specular 0.0 0.0 0.0 1.0 0.5
+            specular 0.5 0.5 0.5 1.0
+            emissive 0.0 0.0 0.0 1.0
 
             texture_unit
             {
                 texture floor_2.jpg
+            }
+
+            normal_map
+            {
+                texture floor_1.jpg
             }
         }
     }

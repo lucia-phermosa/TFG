@@ -157,7 +157,7 @@
 
     <include>
       <name>skate_park</name>
-      <pose>150 60 3 0 0 0</pose>
+      <pose>50 0 2.3 0 0 0</pose>
       <uri>file:///home/lucia/TFG/robot_quadruped/src/robot_gazebo/models/skate_park/skate_park.sdf</uri>
     </include>
 
