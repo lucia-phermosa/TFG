@@ -1,0 +1,16 @@
+parameter_bridge:
+  ros__parameters:
+    bridges:
+      - ros_topic_name: "clock"
+        gz_topic_name: "/world/robot_world/clock"
+        ros_type_name: "rosgraph_msgs/msg/Clock"
+        gz_type_name: "gz.msgs.Clock"
+        direction: GZ_TO_ROS
+
+      - ros_topic_name: "imu"
+        gz_topic_name: "/world/robot_world/model/robot/link/base_link/sensor/imu_sensor/imu"
+        ros_type_name: "sensor_msgs/msg/Imu"
+        gz_type_name: "gz.msgs.IMU"
+        direction: GZ_TO_ROS
+
+

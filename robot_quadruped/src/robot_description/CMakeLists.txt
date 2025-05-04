@@ -9,8 +9,6 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(ros_gz REQUIRED)
-find_package(ros2_control REQUIRED)
-find_package(gz_ros2_control REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -25,7 +23,7 @@ if(BUILD_TESTING)
 endif()
 
 install(
-	DIRECTORY launch meshes urdf
+	DIRECTORY launch meshes urdf config
 	DESTINATION share/${PROJECT_NAME}/
 )
 
