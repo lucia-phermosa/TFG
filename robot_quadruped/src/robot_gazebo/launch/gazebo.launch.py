@@ -1,100 +1,158 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
 import os
 import random
 
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, TimerAction, DeclareLaunchArgument, SetEnvironmentVariable
+from launch.actions import IncludeLaunchDescription, TimerAction, SetEnvironmentVariable, ExecuteProcess
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare
 from ament_index_python.packages import get_package_share_directory, get_package_prefix
 
 def generate_launch_description():
-    # Paquetes y rutas
-    pkg_gz_sim = FindPackageShare('ros_gz_sim').find('ros_gz_sim')
-    pkg_robot_gazebo = FindPackageShare('robot_gazebo').find('robot_gazebo')
-    pkg_robot_description = FindPackageShare('robot_description').find('robot_description')
-    description_install_dir = get_package_prefix('robot_description')
+    # --- locate packages and files ---
+    pkg_gz_sim         = get_package_share_directory('ros_gz_sim')
+    pkg_robot_gazebo   = get_package_share_directory('robot_gazebo')
+    pkg_robot_desc     = get_package_share_directory('robot_description')
 
-    urdf_file = os.path.join(pkg_robot_description, 'urdf', 'robot.urdf')
-    controller_config = '/home/lucia/TFG/robot_quadruped/src/robot_description/config/controller.yaml'
-    world_file = os.path.join(pkg_robot_gazebo, 'worlds', 'demo.sdf')
+    urdf_file          = os.path.join(pkg_robot_desc,   'urdf',    'robot.urdf')
+    controller_yaml    = os.path.join(pkg_robot_desc,   'config',  'ros2_control.yaml')
+    world_file         = os.path.join(pkg_robot_gazebo, 'worlds',  'demo.sdf')
 
-    # Leer URDF
-    with open(urdf_file, 'r') as infp:
-        robot_description_content = infp.read()
+    # read URDF into a string
+    with open(urdf_file, 'r') as f:
+        robot_description_content = f.read()
 
-    # Nombre random para evitar conflictos
-    robot_base_name = "robot_quadruped"
-    entity_name = robot_base_name + "-" + str(int(random.random()*100000))
+    # random name to avoid conflicts
+    entity_name = f"robot_quadruped_{random.randint(0,99999)}"
 
-    # 1. Lanzar Gazebo
-    launch_gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(pkg_gz_sim, 'launch', 'gz_sim.launch.py')
-        ),
+    # --- Gazebo launch ---
+    launch_gz = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(pkg_gz_sim, 'launch', 'gz_sim.launch.py')),
         launch_arguments={'gz_args': f'-r -v 4 {world_file}'}.items()
     )
 
-    # 2. Setear paths de GAZEBO
-    set_gazebo_model_path = SetEnvironmentVariable(
+    # --- environment for models & plugins ---
+    set_model_path = SetEnvironmentVariable(
         name='GAZEBO_MODEL_PATH',
-        value=f'{description_install_dir}/share:{os.path.join(pkg_robot_gazebo, "models")}'
+        value=os.path.join(pkg_robot_gazebo, 'models')
     )
-
-    set_gazebo_plugin_path = SetEnvironmentVariable(
+    set_plugin_path = SetEnvironmentVariable(
         name='GAZEBO_PLUGIN_PATH',
-        value=f'{description_install_dir}/lib'
+        value=os.path.join(get_package_prefix('robot_description'), 'lib')
     )
 
-    # 3. Publicar URDF
+    # --- publish the URDF ---
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
         parameters=[{
             'robot_description': robot_description_content,
-            'use_sim_time': True
+            'use_sim_time': True,
         }],
         output='screen'
     )
 
-    # 4. Spawnear el robot en Gazebo
-    spawn_robot = Node(
+    # --- spawn into Gazebo using the URDF topic ---
+    spawn_entity = Node(
         package='ros_gz_sim',
         executable='create',
+        name='spawn_entity',
         arguments=[
             '-entity', entity_name,
-            '-topic', '/robot_description',
+            '-topic', 'robot_description',
             '-x', '0', '-y', '0', '-z', '0.2',
             '-R', '0', '-P', '0', '-Y', '0'
         ],
         output='screen'
     )
 
-    # 5. Lanza ros2_control_node 
-    ros2_control_node = TimerAction(
-        period=3.0,
+    # --- bridge /clock, /tf, joint_states, IMU, and send commands back to Gazebo ---
+    bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        name='gz_bridge',
+        arguments=[
+            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
+            '/imu/data@sensor_msgs/msg/Imu@gz.msgs.IMU',
+            '/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V',
+            '/joint_states@sensor_msgs/msg/JointState@gz.msgs.Model',
+            '/joint_group_position_controller/joint_trajectory@trajectory_msgs/msg/JointTrajectory]gz.msgs.JointTrajectory',
+        ],
+        parameters=[{'use_sim_time': True}],
+        output='screen'
+    )
+
+    # --- ros2_control manager: give it the URDF + your controller YAML ---
+    controller_manager = Node(
+        package='controller_manager',
+        executable='ros2_control_node',
+        name='controller_manager',
+        parameters=[
+            {   # robot_description _and_ sim_time
+                'robot_description': robot_description_content,
+                'use_sim_time': True,
+            },
+            controller_yaml   # load your ros2_control.yaml
+        ],
+        output='screen'
+    )
+
+    # --- spawn joint_state_broadcaster after a delay ---
+    spawner_js = TimerAction(
+        period=15.0,
+        actions=[ 
+            Node(
+                package='controller_manager',
+                executable='spawner',
+                name='spawner_joint_state_broadcaster',
+                arguments=['joint_state_broadcaster'],
+                output='screen',
+            )
+        ]
+    )
+
+    # --- then spawn the position‐trajectory controller ---
+    spawner_pos = TimerAction(
+        period=18.0,  # a few seconds after the broadcaster
         actions=[
             Node(
-                package="controller_manager",
-                executable="ros2_control_node",
-                parameters=[
-                    {"robot_description": robot_description_content},
-                    {"use_sim_time": True},
-                    controller_config
+                package='controller_manager',
+                executable='spawner',
+                name='spawner_position_controller',
+                arguments=[
+                    'joint_group_position_controller',
+                    '--controller-manager', 'controller_manager'
                 ],
-                output="screen"
+                output='screen',
+            )
+        ]
+    )
+
+    # --- finally, check list of loaded controllers ---
+    check_controllers = TimerAction(
+        period=25.0,
+        actions=[
+            ExecuteProcess(
+                cmd=[
+                    'bash', '-c',
+                    "echo '=== controller list ===' && ros2 control list_controllers"
+                ],
+                output='screen',
             )
         ]
     )
 
     return LaunchDescription([
-        set_gazebo_model_path,
-        set_gazebo_plugin_path,
-        launch_gazebo,
+        set_model_path,
+        set_plugin_path,
+        launch_gz,
         robot_state_publisher,
-        spawn_robot,
-        ros2_control_node,
+        spawn_entity,
+        bridge,
+        controller_manager,   # <— make sure this is actually launched!
+        spawner_js,
+        spawner_pos,
+        check_controllers,
     ])
