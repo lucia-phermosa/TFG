@@ -1,12 +1,41 @@
 controller_manager:
   ros__parameters:
     update_rate: 200
+    use_sim_time: true
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
-    revolution1_position_controller:
-      type: forward_command_controller/ForwardCommandController
+    joint_group_position_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
       joints:
         - Revolution_1
-      interface_name: position
+        - Revolution_2
+        - Revolution_3
+        - Revolution_4
+        - Revolution_5
+        - Revolution_6
+        - Revolution_7
+        - Revolution_8
+        - Revolution_9
+        - Revolution_10
+        - Revolution_11
+        - Revolution_12
+      
+      command_interfaces:
+        - position
+      state_interfaces:
+        - position
+        - velocity
+      
+      allow_partial_joints_goal: true
+      state_publish_rate: 100.0
+      action_monitor_rate: 20.0
+      
+      constraints:
+        stopped_velocity_tolerance: 0.01
+        goal_time: 0.0
+      
+      hold_trajectory_duration: 0.0
+      action_tolerance: 1.0
