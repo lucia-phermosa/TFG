@@ -1,0 +1,20 @@
+
+ros2 run demo walk.py \
+  --freq 0.55 \
+  --duty 0.60 \
+  --driver-ampl 0.32 \
+  --aux-ampl 0.12 \
+  --elbow-lift 0.24 \
+  --shoulder-gain-RL 0.40 \
+  --elbow-gain-RL 7.0 \
+  --bias-shoulder 0.08 \
+  --bias-abd 0.06 \
+  --rate 100 \
+  --horizon 0.14 \
+  --geom-comp \
+  --print
+  
+ros2 launch demo gazebo.launch.py
+ros2 run demo entitypose_to_odom.py   --ros-args -p pose_topic:=/model/demo/pose -p odom_topic:=/odom
+ros2 run demo gait_duty_autoadapt --ros-args -p odom_topic:=/odom
+ros2 topic pub --once /goal_x std_msgs/Float64 "{data: 1.5}"

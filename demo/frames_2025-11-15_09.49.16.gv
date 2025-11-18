@@ -1,0 +1,23 @@
+digraph G {
+"FL_HipFrame" -> "FL_Hombro"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "FL_HipFrame"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+"FR_HipFrame" -> "FR_Hombro"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "FR_HipFrame"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+"RL_HipFrame" -> "RL_Hombro"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "RL_HipFrame"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+"RR_HipFrame" -> "RR_Hombro"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "RR_HipFrame"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+"base_link" -> "imu_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"FL_Brazo" -> "FL_Antebrazo"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+"FL_Hombro" -> "FL_Brazo"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+"FR_Brazo" -> "FR_Antebrazo"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+"FR_Hombro" -> "FR_Brazo"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+"RL_Brazo" -> "RL_Antebrazo"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+"RL_Hombro" -> "RL_Brazo"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+"RR_Brazo" -> "RR_Antebrazo"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+"RR_Hombro" -> "RR_Brazo"[label=" Broadcaster: default_authority\nAverage rate: 22.5\nBuffer length: 0.4\nMost recent transform: 1.05\nOldest transform: 0.65\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1763196556.6095679"[ shape=plaintext ] ;
+}->"base_link";
+}

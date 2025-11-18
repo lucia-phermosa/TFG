@@ -1,0 +1,25 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 200
+
+joint_state_broadcaster:
+  ros__parameters:
+    type: joint_state_broadcaster/JointStateBroadcaster
+
+forward_position_controller:
+  ros__parameters:
+    type: forward_command_controller/ForwardCommandController
+    joints:
+      - Revolution_1
+      - Revolution_2
+      - Revolution_3
+      - Revolution_4
+      - Revolution_5
+      - Revolution_6
+      - Revolution_7
+      - Revolution_8
+      - Revolution_9
+      - Revolution_10
+      - Revolution_11
+      - Revolution_12
+    interface_name: position   # <--- OBLIGATORIO

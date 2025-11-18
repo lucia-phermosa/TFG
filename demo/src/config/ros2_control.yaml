@@ -1,0 +1,48 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 200  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - Revolution_1
+      - Revolution_2
+      - Revolution_3
+      - Revolution_4
+      - Revolution_5
+      - Revolution_6
+      - Revolution_7
+      - Revolution_8
+      - Revolution_9
+      - Revolution_10
+      - Revolution_11
+      - Revolution_12
+    command_interfaces: ["position"]
+    state_interfaces: ["position", "velocity"]
+
+# gz_ros2_control:
+#   ros__parameters:
+#     pid_gains:
+#       # ELBOWS (1,4,7,10)
+#       Revolution_1:  {p: 120.0, d: 2.0, i: 0.0, i_clamp: 0.0}
+#       Revolution_4:  {p: 120.0, d: 2.0, i: 0.0, i_clamp: 0.0}
+#       Revolution_7:  {p: 120.0, d: 2.0, i: 0.0, i_clamp: 0.0}
+#       Revolution_10: {p: 120.0, d: 2.0, i: 0.0, i_clamp: 0.0}
+
+#       # SHOULDERS (2,5,8,11): altos (eran el cuello de botella)
+#       Revolution_2:  {p: 200.0, d: 4.0, i: 0.0, i_clamp: 0.0}
+#       Revolution_5:  {p: 200.0, d: 4.0, i: 0.0, i_clamp: 0.0}
+#       Revolution_8:  {p: 200.0, d: 4.0, i: 0.0, i_clamp: 0.0}
+#       Revolution_11: {p: 200.0, d: 4.0, i: 0.0, i_clamp: 0.0}
+
+#       # HIPS roll (3,6,9,12): moderados (solo estabilizan base)
+#       Revolution_3:  {p: 80.0,  d: 1.5, i: 0.0, i_clamp: 0.0}
+#       Revolution_6:  {p: 80.0,  d: 1.5, i: 0.0, i_clamp: 0.0}
+#       Revolution_9:  {p: 80.0,  d: 1.5, i: 0.0, i_clamp: 0.0}
+#       Revolution_12: {p: 80.0,  d: 1.5, i: 0.0, i_clamp: 0.0}

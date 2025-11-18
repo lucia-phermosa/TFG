@@ -1,0 +1,446 @@
+<?xml version="1.0" ?>
+<robot name="demo">
+
+  <!-- ======================= FRICCIÓN / CONTACTO ======================= -->
+  <gazebo reference="base_link">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="FL_Hombro">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>false</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="FL_Brazo">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="RL_Hombro">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>false</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="RL_Brazo">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="RR_Hombro">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>false</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="RR_Brazo">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="FR_Hombro">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>false</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="FR_Brazo">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>true</self_collide>  <!-- cambiado a true para coherencia -->
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="FL_Antebrazo">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="RL_Antebrazo">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="RR_Antebrazo">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="FR_Antebrazo">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1><mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <!-- Fricción/contacto SOLO en las colisiones de los pies (antebrazos) -->
+  <gazebo reference="FL_Antebrazo::collision">
+    <surface>
+      <friction>
+        <ode>
+          <mu>1.4</mu>
+          <mu2>1.2</mu2>
+          <slip1>0.0</slip1>
+          <slip2>0.0</slip2>
+        </ode>
+      </friction>
+      <contact>
+        <ode>
+          <kp>2e6</kp>
+          <kd>2.0</kd>
+          <max_vel>0.2</max_vel>
+          <min_depth>0.001</min_depth>
+        </ode>
+      </contact>
+    </surface>
+  </gazebo>
+
+  <gazebo reference="RL_Antebrazo::collision">
+    <surface>
+      <friction>
+        <ode>
+          <mu>1.4</mu>
+          <mu2>1.2</mu2>
+          <slip1>0.0</slip1>
+          <slip2>0.0</slip2>
+        </ode>
+      </friction>
+      <contact>
+        <ode>
+          <kp>2e6</kp>
+          <kd>2.0</kd>
+          <max_vel>0.2</max_vel>
+          <min_depth>0.001</min_depth>
+        </ode>
+      </contact>
+    </surface>
+  </gazebo>
+
+  <gazebo reference="RR_Antebrazo::collision">
+    <surface>
+      <friction>
+        <ode>
+          <mu>1.4</mu>
+          <mu2>1.2</mu2>
+          <slip1>0.0</slip1>
+          <slip2>0.0</slip2>
+        </ode>
+      </friction>
+      <contact>
+        <ode>
+          <kp>2e6</kp>
+          <kd>2.0</kd>
+          <max_vel>0.2</max_vel>
+          <min_depth>0.001</min_depth>
+        </ode>
+      </contact>
+    </surface>
+  </gazebo>
+
+  <gazebo reference="FR_Antebrazo::collision">
+    <surface>
+      <friction>
+        <ode>
+          <mu>1.4</mu>
+          <mu2>1.2</mu2>
+          <slip1>0.0</slip1>
+          <slip2>0.0</slip2>
+        </ode>
+      </friction>
+      <contact>
+        <ode>
+          <kp>2e6</kp>
+          <kd>2.0</kd>
+          <max_vel>0.2</max_vel>
+          <min_depth>0.001</min_depth>
+        </ode>
+      </contact>
+    </surface>
+  </gazebo>
+
+  <!-- ======================= ros2_control (URDF) ======================= -->
+  <ros2_control name="GazeboSimSystem" type="system">
+    <hardware><plugin>gz_ros2_control/GazeboSimSystem</plugin></hardware>
+    <joint name="Revolution_1"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+    <joint name="Revolution_2"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+    <joint name="Revolution_3"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+    <joint name="Revolution_4"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+    <joint name="Revolution_5"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+    <joint name="Revolution_6"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+    <joint name="Revolution_7"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+    <joint name="Revolution_8"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+    <joint name="Revolution_9"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+    <joint name="Revolution_10"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+    <joint name="Revolution_11"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+    <joint name="Revolution_12"><command_interface name="position"><param name="min">-1.57</param><param name="max">1.57</param></command_interface><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/><state_interface name="effort"/></joint>
+  </ros2_control>
+
+  <!-- ======================= PLUGINS de GZ ======================= -->
+  <gazebo>
+    <plugin filename="gz_ros2_control-system"
+            name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find demo)/config/ros2_control.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="libgz-sim-pose-publisher-system"
+            name="gz::sim::systems::PosePublisher">
+      <publish_link_pose>false</publish_link_pose>
+      <publish_nested_model_pose>false</publish_nested_model_pose>
+      <use_pose_vector_msg>true</use_pose_vector_msg>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin
+      filename="gz-sim-odometry-publisher-system"
+      name="gz::sim::systems::OdometryPublisher">
+      <odom_frame>odom</odom_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="imu_link">
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100.0</update_rate>
+      <visualize>true</visualize>
+      <topic>imu</topic>
+      <gz_frame_id>imu_link</gz_frame_id>
+      <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu">
+        <initial_orientation_as_reference>true</initial_orientation_as_reference>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- ======================= LINKS ======================= -->
+  <link name="base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.132259326627842"/>
+      <inertia ixx="0.000199" ixy="0.000129" ixz="2e-06" iyy="0.001133" iyz="-3e-06" izz="0.001312"/>
+    </inertial>
+    <visual><origin rpy="0 0 0" xyz="0 0 0"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/base_link.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="0 0 0"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/base_link.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+
+  <!-- HIP FRAMES (nuevos, sin geometría) -->
+  <link name="FL_HipFrame"><inertial><origin xyz="0 0 0" rpy="0 0 0"/><mass value="0.001"/><inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/></inertial></link>
+  <link name="FR_HipFrame"><inertial><origin xyz="0 0 0" rpy="0 0 0"/><mass value="0.001"/><inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/></inertial></link>
+  <link name="RL_HipFrame"><inertial><origin xyz="0 0 0" rpy="0 0 0"/><mass value="0.001"/><inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/></inertial></link>
+  <link name="RR_HipFrame"><inertial><origin xyz="0 0 0" rpy="0 0 0"/><mass value="0.001"/><inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/></inertial></link>
+
+  <!-- Extremidades (igual que tenías) -->
+  <link name="FL_Antebrazo">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.11017130901550822"/><inertia ixx="5e-06" ixy="0" ixz="0" iyy="1.1e-05" iyz="0" izz="6e-06"/></inertial>
+    <visual><origin rpy="0 0 0" xyz="-2.275 0.6 -1.49"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FL_Antebrazo.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="-2.275 0.6 -1.49"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FL_Antebrazo.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+  <link name="FL_Brazo">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.30409136144975923"/><inertia ixx="2.3e-05" ixy="2e-06" ixz="-1.7e-05" iyy="3.7e-05" iyz="2e-06" izz="2.3e-05"/></inertial>
+    <visual><origin rpy="0 0 0" xyz="-3.53 1.40795 -2.926598"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FL_Brazo.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="-3.53 1.40795 -2.926598"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FL_Brazo.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+  <link name="FL_Hombro">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.1859774303312477"/><inertia ixx="4e-06" ixy="0" ixz="0" iyy="3e-06" iyz="-1e-06" izz="4e-06"/></inertial>
+    <!-- RESTAURADOS offsets del CAD en visual/collision -->
+    <visual><origin rpy="0 0 0" xyz="-3.6501245 1.8257 -2.90722"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FL_Hombro.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="-3.6501245 1.8257 -2.90722"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FL_Hombro.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+
+  <link name="RL_Antebrazo">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.11048026895118968"/><inertia ixx="5e-06" ixy="0" ixz="0" iyy="1.1e-05" iyz="0" izz="6e-06"/></inertial>
+    <visual><origin rpy="0 0 0" xyz="1.675 0.1 -1.56"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RL_Antebrazo.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="1.675 0.1 -1.56"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RL_Antebrazo.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+  <link name="RL_Brazo">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.3040973749415957"/><inertia ixx="2.1e-05" ixy="2e-06" ixz="-1.6e-05" iyy="3.7e-05" iyz="2e-06" izz="2.5e-05"/></inertial>
+    <visual><origin rpy="0 0 0" xyz="0.32 0.85 -2.91722"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RL_Brazo.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="0.32 0.85 -2.91722"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RL_Brazo.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+  <link name="RL_Hombro">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.18594032037447486"/><inertia ixx="4e-06" ixy="0" ixz="0" iyy="3e-06" iyz="-1e-06" izz="4e-06"/></inertial>
+    <visual><origin rpy="0 0 0" xyz="0.6 1.23 -2.91722"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RL_Hombro.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="0.6 1.23 -2.91722"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RL_Hombro.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+
+  <link name="RR_Antebrazo">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.11048045171812943"/><inertia ixx="5e-06" ixy="-0.0" ixz="5e-06" iyy="1.1e-05" iyz="0.0" izz="7e-06"/></inertial>
+    <visual><origin rpy="0 0 0" xyz="2.242 3.66 -1.5"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RR_Antebrazo.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="2.242 3.66 -1.5"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RR_Antebrazo.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+  <link name="RR_Brazo">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.3040973749415908"/><inertia ixx="2e-05" ixy="5e-06" ixz="-1.6e-05" iyy="3.6e-05" iyz="4e-06" izz="2.7e-05"/></inertial>
+    <visual><origin rpy="0 0 0" xyz="0.65 3.5 -2.9"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RR_Brazo.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="0.65 3.5 -2.9"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RR_Brazo.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+  <link name="RR_Hombro">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.185940356423774"/><inertia ixx="4e-06" ixy="0" ixz="0" iyy="3e-06" iyz="0" izz="4e-06"/></inertial>
+    <visual><origin rpy="0 0 0" xyz="0.84 3.035 -2.9"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RR_Hombro.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="0.84 3.035 -2.9"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/RR_Hombro.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+
+  <link name="FR_Antebrazo">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.11033575580722182"/><inertia ixx="5e-06" ixy="0" ixz="0" iyy="1.1e-05" iyz="0" izz="6e-06"/></inertial>
+    <visual><origin rpy="0 0 0" xyz="-1.655 4.35 -1.43"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FR_Antebrazo.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="-1.655 4.35 -1.43"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FR_Antebrazo.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+  <link name="FR_Brazo">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.3040973749414956"/><inertia ixx="2.3e-05" ixy="3e-06" ixz="-1.6e-05" iyy="3.7e-05" iyz="3e-06" izz="2.4e-05"/></inertial>
+    <visual><origin rpy="0 0 0" xyz="-3.1 4 -2.90722"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FR_Brazo.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="-3.1 4 -2.90722"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FR_Brazo.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+  <link name="FR_Hombro">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.1859736994896006"/><inertia ixx="4e-06" ixy="0" ixz="0" iyy="3e-06" iyz="1e-06" izz="4e-06"/></inertial>
+    <visual><origin rpy="0 0 0" xyz="-3.37 3.62 -2.90722"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FR_Hombro.stl" scale="0.02 0.02 0.02"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="-3.37 3.62 -2.90722"/><geometry><mesh filename="file:///home/lucia/Desktop/demo/src/meshes/FR_Hombro.stl" scale="0.02 0.02 0.02"/></geometry></collision>
+  </link>
+
+  <!-- IMU -->
+  <link name="imu_link">
+    <inertial><origin rpy="0 0 0" xyz="0 0 0"/><mass value="0.1"/><inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/></inertial>
+  </link>
+
+  <!-- ======================= JOINTS ======================= -->
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/><child link="imu_link"/>
+  </joint>
+
+  <!-- HIPS: base_link -> HipFrame (revolute) -->
+  <joint name="Revolution_12" type="revolute">
+    <origin rpy="0 0 0" xyz="3.41 -3.61 2.90722"/>
+    <parent link="base_link"/><child link="FR_HipFrame"/>
+    <axis xyz="1 0 0"/>
+    <!-- ↑ Hip roll (ab/ad). Si quisieras hip en pitch, cambia axis a "0 1 0". -->
+    <limit effort="80.0" lower="-1.57" upper="1.57" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+
+  <joint name="Revolution_3" type="revolute">
+    <origin rpy="0 0 0" xyz="3.6001245 -1.83513 2.90722"/>
+    <parent link="base_link"/><child link="FL_HipFrame"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="80.0" lower="-1.57" upper="1.57" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+
+  <joint name="Revolution_9" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.8 -3.03 2.9"/>
+    <parent link="base_link"/><child link="RR_HipFrame"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="80.0" lower="-1.57" upper="1.57" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+
+  <joint name="Revolution_6" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.557292 -1.25513 2.91722"/>
+    <parent link="base_link"/><child link="RL_HipFrame"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="80.0" lower="-1.57" upper="1.57" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+
+  <!-- Fijos: HipFrame -> Hombro (SIN offset) -->
+  <joint name="FR_HipFrame_to_FR_Hombro" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="FR_HipFrame"/><child link="FR_Hombro"/>
+  </joint>
+  <joint name="FL_HipFrame_to_FL_Hombro" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="FL_HipFrame"/><child link="FL_Hombro"/>
+  </joint>
+  <joint name="RR_HipFrame_to_RR_Hombro" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="RR_HipFrame"/><child link="RR_Hombro"/>
+  </joint>
+  <joint name="RL_HipFrame_to_RL_Hombro" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="RL_HipFrame"/><child link="RL_Hombro"/>
+  </joint>
+
+  <!-- FL shoulder/elbow -->
+  <joint name="Revolution_2" type="revolute">
+    <origin xyz="-0.12 0.41 0.02"/>
+    <parent link="FL_Hombro"/><child link="FL_Brazo"/>
+    <axis xyz="0 1 0"/>  <!-- pitch positivo (antes 0 -1 0) -->
+    <limit lower="-1.57" upper="1.57" effort="60.0" velocity="10.0"/>
+    <dynamics damping="0.08" friction="0.0"/>
+  </joint>
+  <joint name="Revolution_1" type="revolute">
+    <origin xyz="-1.26 0.80 -1.43"/>
+    <parent link="FL_Brazo"/><child link="FL_Antebrazo"/>
+    <axis xyz="0 1 0"/>  <!-- pitch positivo -->
+    <limit lower="-1.57" upper="1.57" effort="60.0" velocity="10.0"/>
+    <dynamics damping="0.08" friction="0.0"/>
+  </joint>
+
+  <!-- RL shoulder/elbow -->
+  <joint name="Revolution_5" type="revolute">
+    <origin xyz="0.28 0.34 0.01"/>
+    <parent link="RL_Hombro"/><child link="RL_Brazo"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="60.0" velocity="10.0"/>
+    <dynamics damping="0.08" friction="0.0"/>
+  </joint>
+  <joint name="Revolution_4" type="revolute">
+    <origin xyz="-1.35 0.75 -1.35"/>
+    <parent link="RL_Brazo"/><child link="RL_Antebrazo"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="60.0" velocity="10.0"/>
+    <dynamics damping="0.08" friction="0.0"/>
+  </joint>
+
+  <!-- RR shoulder/elbow -->
+  <joint name="Revolution_8" type="revolute">
+    <origin xyz="0.18 -0.415 -0.035"/>
+    <parent link="RR_Hombro"/><child link="RR_Brazo"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="60.0" velocity="10.0"/>
+    <dynamics damping="0.08" friction="0.0"/>
+  </joint>
+  <joint name="Revolution_7" type="revolute">
+    <origin xyz="-1.59 -0.15 -1.4"/>
+    <parent link="RR_Brazo"/><child link="RR_Antebrazo"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="60.0" velocity="10.0"/>
+    <dynamics damping="0.08" friction="0.0"/>
+  </joint>
+
+  <!-- FR shoulder/elbow -->
+  <joint name="Revolution_11" type="revolute">
+    <origin xyz="-0.27 -0.35 -0.01"/>
+    <parent link="FR_Hombro"/><child link="FR_Brazo"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="60.0" velocity="10.0"/>
+    <dynamics damping="0.08" friction="0.0"/>
+  </joint>
+  <joint name="Revolution_10" type="revolute">
+    <origin xyz="-1.445 -0.32 -1.48"/>
+    <parent link="FR_Brazo"/><child link="FR_Antebrazo"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="60.0" velocity="10.0"/>
+    <dynamics damping="0.08" friction="0.0"/>
+  </joint>
+
+
+</robot>
