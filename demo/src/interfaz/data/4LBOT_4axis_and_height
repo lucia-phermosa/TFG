@@ -1,0 +1,7 @@
+4LBOT controller
+VEL_X	Forward-reverse	3	SLIDER	Rotation Z	0	1.0	0.0
+VEL_Y	Velocity Y-axis	3	SLIDER	Axe Z	0	1.0	0.0
+ANG_Y	Pitch	3	SLIDER	Axe Y	0	1.0	0.0
+ANG_X	Roll	3	SLIDER	Axe X	0	1.0	0.0
+DZ_POS	Height increment	3	SLIDER	Rotation Y	0	1.0	0.0
+DZ_NEG	Height decrement	3	SLIDER	Rotation X	0	1.0	0.0

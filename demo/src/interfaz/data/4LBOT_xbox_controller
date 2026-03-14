@@ -1,0 +1,7 @@
+4LBOT_xbox
+ANG_X	Roll	3	SLIDER	Rotation X	0	1.0	0.05
+ANG_Y	Pitch	3	SLIDER	Rotation Y	0	1.0	0.05
+VEL_X	Longitu speed	3	SLIDER	Axe Y	0	-1.0	0.1
+VEL_Y	Lateral speed	3	SLIDER	Axe X	0	1.0	0.1
+VEL_Z	Yaw_ang speed	3	SLIDER	Axe Z	0	1.0	0.0
+ARROWS	arrows	2	HAT	cooliehat: Commande de pouce	0	1.0	0.0
